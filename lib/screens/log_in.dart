@@ -24,7 +24,7 @@ class _LogInState extends State<LogIn> {
         padding: EdgeInsets.fromLTRB(50, MediaQuery.of(context).size.height * 0.15, 50, 0),
         decoration: BoxDecoration(
           image: DecorationImage(
-                image: AssetImage("assets/images/splash_background.jpg"),
+                image: AssetImage("assets/images/login_background.jpg"),
                 fit: BoxFit.cover)
         ),
         child: Center(
@@ -91,7 +91,7 @@ class _LogInState extends State<LogIn> {
                           onPressed: (){
                             Navigator.pushReplacementNamed(
                               context,
-                              'Home',
+                              '/Home',
                             );
                           },
                           child: Text(
@@ -118,7 +118,7 @@ class _LogInState extends State<LogIn> {
                           onTap: (){
                             Navigator.pushReplacementNamed(
                                 context,
-                                'SignUp',
+                                '/SignUp',
                             );
                           },
                           child: Text(

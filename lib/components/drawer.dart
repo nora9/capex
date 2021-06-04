@@ -37,9 +37,14 @@ class MyDrawer extends StatelessWidget{
                 padding: EdgeInsets.only(left: 20 , right: 20),
                 child: Column(
                   children: [
-                    ListTile(
-                      title: Text('Home'),
-                      trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context, '/Home');
+                      },
+                      child: ListTile(
+                        title: Text('Home'),
+                        trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
+                      ),
                     ),
                     ListTile(
                       title: Text('New Loan'),
@@ -50,16 +55,17 @@ class MyDrawer extends StatelessWidget{
                       trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
                     ),
                     ListTile(
-                      title: Text('Report'),
-                      trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
-                    ),
-                    ListTile(
                       title: Text('Settings'),
                       trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
                     ),
-                    ListTile(
-                      title: Text('Logout'),
-                      trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushNamedAndRemoveUntil(context, '/LogIn', (route) => false);
+                      },
+                      child: ListTile(
+                        title: Text('Logout'),
+                        trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
+                      ),
                     )
                   ],
                 ),
