@@ -7,8 +7,6 @@ class CorporationLoanTypes extends StatelessWidget {
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Color(0xff3d5a96),
         title: Text(
           'Corporation Loan Types',
         ),

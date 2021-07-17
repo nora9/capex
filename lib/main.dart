@@ -29,6 +29,7 @@ import 'file:///C:/Users/Nora/AndroidStudioProjects/capex/lib/screens/go_loan/in
 import 'file:///C:/Users/Nora/AndroidStudioProjects/capex/lib/screens/go_loan/individual_loan/individual_loan_types/individual_loan_types.dart';
 import 'package:capex/screens/log_in.dart';
 import 'package:capex/screens/my_profile.dart';
+import 'package:capex/screens/settings.dart';
 import 'file:///C:/Users/Nora/AndroidStudioProjects/capex/lib/screens/go_loan/go_loan.dart';
 import 'package:capex/screens/status.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,41 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+          appBarTheme: AppBarTheme(
+            elevation: 0,
+            backgroundColor: Color(0xff3d5a96),
+            titleTextStyle: TextStyle(
+              color: Colors.white,
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold
+            ),
+            iconTheme: IconThemeData(
+              color: Colors.white
+            ),
+          ),
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            backgroundColor: Color(0xff3d5a96),
+          )
+      ),
+      darkTheme: ThemeData(
+        scaffoldBackgroundColor: Color(0xff333739),
+        appBarTheme: AppBarTheme(
+          elevation: 0,
+          backgroundColor: Color(0xff3d5a96),
+          titleTextStyle: TextStyle(
+              color: Colors.white,
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold
+          ),
+          iconTheme: IconThemeData(
+              color: Colors.white
+          ),
+        ),
+
+      ),
+      themeMode: ThemeMode.light,
       title: 'Flutter Demo',
       initialRoute: 'SplashScreen',
       routes: {
@@ -57,6 +93,7 @@ class MyApp extends StatelessWidget {
 
         '/MyProfile': (context) => MyProfile(),
         '/Status': (context) => Status(),
+        '/Settings': (context) => Settings(),
 
 
         //---------------go loan----------------------

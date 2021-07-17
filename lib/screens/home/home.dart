@@ -15,8 +15,6 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Color(0xff3d5a96),
         title: Text(
           'Home',
         ),
@@ -35,7 +33,7 @@ class _HomeState extends State<Home> {
                Center(
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.85,
-                  height: MediaQuery.of(context).size.height * 0.07,
+                  height: MediaQuery.of(context).size.height * 0.075,
                   child: Card(
                     color: Color(0xff8dbe5d),
                     shape: RoundedRectangleBorder(

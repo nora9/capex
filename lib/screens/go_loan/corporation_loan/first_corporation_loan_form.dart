@@ -11,46 +11,53 @@ class _FirstCorporationLoanFormState extends State<FirstCorporationLoanForm> {
 
   Widget _buildDropdownButtonFormField(String text , List<String> l){
     String dropdownValue;
-    return DropdownButtonFormField<String>(
-      decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(15.0, 15.0, 10.0, 3.0),
-          isDense: true,
-          enabledBorder: UnderlineInputBorder( borderSide: BorderSide(color: Color(0xff8dbe5d), width: 1.0))
+    return Container(
+      padding: EdgeInsets.fromLTRB(0.0, 5, 0.0, 15),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: Color(0xff8dbe5d),width: 0.8)
       ),
-      dropdownColor: Color(0xFFB7B7C1),
-      hint: Text(
-        text,
-        style: TextStyle(
-            color: Color(0xff3d5a96),
-            fontSize: 16
+      child: DropdownButtonFormField<String>(
+        decoration: InputDecoration(
+            contentPadding: EdgeInsets.fromLTRB(15.0, 15.0, 10.0, 3.0),
+            isDense: true,
+            enabledBorder: UnderlineInputBorder( borderSide: BorderSide(color: Colors.white, width: 0.0))
         ),
-      ),
-      value: dropdownValue,
-      icon: const Icon(Icons.keyboard_arrow_down , color: Color(0xff3d5a96), size: 25,),
-      iconSize: 20,
-      isExpanded: true,
-      style: TextStyle(
-          fontSize: 20
-      ),
-      onChanged: (newValue) {
-        setState(() {
-          dropdownValue = newValue;
-          print(dropdownValue);
-        });
-      },
-      items: l
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(
-            value,
-            style: TextStyle(
-                color: Color(0xff3d5a96),
-                fontSize: 16
-            ),
+        dropdownColor: Color(0xFFB7B7C1),
+        hint: Text(
+          text,
+          style: TextStyle(
+              color: Color(0xff3d5a96),
+              fontSize: 16
           ),
-        );
-      }).toList(),
+        ),
+        value: dropdownValue,
+        icon: const Icon(Icons.keyboard_arrow_down , color: Color(0xff3d5a96), size: 25,),
+        iconSize: 20,
+        isExpanded: true,
+        style: TextStyle(
+            fontSize: 20
+        ),
+        onChanged: (newValue) {
+          setState(() {
+            dropdownValue = newValue;
+            print(dropdownValue);
+          });
+        },
+        items: l
+            .map<DropdownMenuItem<String>>((String value) {
+          return DropdownMenuItem<String>(
+            value: value,
+            child: Text(
+              value,
+              style: TextStyle(
+                  color: Color(0xff3d5a96),
+                  fontSize: 16
+              ),
+            ),
+          );
+        }).toList(),
+      ),
     );
   }
 
@@ -80,7 +87,6 @@ class _FirstCorporationLoanFormState extends State<FirstCorporationLoanForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Color(0xff3d5a96),
@@ -94,8 +100,6 @@ class _FirstCorporationLoanFormState extends State<FirstCorporationLoanForm> {
             '/CorporationLoanTypes',
           );
         },
-        backgroundColor: Color(0xff3d5a96),
-        elevation: 3,
         child: Icon(
           Icons.near_me,
           color: Color(0xff8dbe5d),

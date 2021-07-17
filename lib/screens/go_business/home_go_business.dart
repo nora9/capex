@@ -10,8 +10,6 @@ class _HomeGoBusinessState extends State<HomeGoBusiness> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Color(0xff3d5a96),
         title: Text(
           'Home',
         ),

@@ -7,8 +7,6 @@ class BusinessSelection extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Color(0xff3d5a96),
         title: Text(
           'Select',
         ),

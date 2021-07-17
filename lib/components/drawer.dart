@@ -3,9 +3,9 @@ class MyDrawer extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      /*decoration: BoxDecoration(
           color: Colors.white
-      ),
+      ),*/
       width: MediaQuery.of(context).size.width / 1.8,
       child: Drawer(                                                         // endDrawer => arabic (right), drawer => english (left)    if we use Directionality that will change
           child: ListView(
@@ -54,9 +54,14 @@ class MyDrawer extends StatelessWidget{
                       title: Text('My Loan'),
                       trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
                     ),
-                    ListTile(
-                      title: Text('Settings'),
-                      trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushNamedAndRemoveUntil(context, '/Settings', (route) => false);
+                      },
+                      child: ListTile(
+                        title: Text('Settings'),
+                        trailing: Icon(Icons.navigate_next , color: Color(0xff3d5a96),),
+                      ),
                     ),
                     InkWell(
                       onTap: (){

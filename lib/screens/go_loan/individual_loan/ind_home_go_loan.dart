@@ -11,8 +11,6 @@ class _IndHomeGoLoanState extends State<IndHomeGoLoan> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Color(0xff3d5a96),
         title: Text(
           'Home',
         ),
